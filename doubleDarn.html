@@ -19,7 +19,7 @@
 
 		#container {
 			padding: 15px;
-			height: 480px;
+			height: 360px;
 			margin: auto;
 			position: absolute;
 			top: 0; left: 0; bottom: 0; right: 0;
@@ -33,29 +33,43 @@
     		margin-bottom: 60px;
 		}
 
-		#text-1, #text-2, #text-3, #note {
+		#forgot-password, #note {
 			text-align: center;
 			font-family: SFLight;
 			color: gray;
 		}
 
-		#text-1 {
-			font-size: 30px;
-			margin-bottom: 0;
+		#forgot-password {
+			margin-top: 0px;
+			font-size: 12px;
+			color: rgb(200, 200, 200);
+			-webkit-transition: .2s all;
+			-moz-transition: .2s all;
+			-o-transition: .2s all;
+			transition: .2s all;
 		}
 
-		#text-2 {
-			margin-top: 15px;
-			margin-bottom: 0px;
-			font-size: 18px;
+		#forgot-password:link {
+			text-decoration: none;
+			color: rgb(200, 200, 200);
 		}
 
-		#text-3 {
-			margin-top: 60px;
-			font-size: 15px;
+		#forgot-password:hover {
+			text-decoration: none;
+			color: rgb(100, 100, 100);
 		}
 
-		#enter-email{
+		#forgot-password:visited {
+			text-decoration: none;
+			color: rgb(200, 200, 200);
+		}
+
+		#email-us {
+			width: 272px;
+			margin: 0 auto;
+		}
+
+		.form-field{
 			width: 250px;
 			padding: 10px;  
 	   		border: solid 1px rgb(210, 210, 210);  
@@ -64,10 +78,11 @@
 	   		font-size: 12px; 
 	   		border-radius: 5px;
 	   		font-family: SFLight;
+	   		margin-bottom: 10px;
 		}
 
 		#go-button{ 
-	   		padding: 9px 15px;  
+	   		padding: 10px 20px;  
 	   		background-color: rgba(81, 199, 129, 0.85);  
 	   		border: solid 1px #51C781;  
 	   		border-radius: 5px;
@@ -104,11 +119,6 @@
 			font-size: 12px;
 		}
 
-		#email-us {
-			width: 350px;
-			margin: 0 auto;
-		}
-
 		#footer {
 			text-align: center;
 			height: 20px;
@@ -131,15 +141,31 @@
 
 		a:hover {
 			text-decoration: none;
-			color: gray;
+			color: rgb(100, 100, 100);
 		}
 
 		a:visited {
 			text-decoration: none;
 			color: rgb(200, 200, 200);
 		}
+
+		#go-container {
+			width: 75px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
 	</style>
 	<script type="text/javascript">
+			onload = function () {
+				var url = "https://api.layer.com/nonces";
+				var xhr = new XMLHttpRequest();
+				xhr.open("POST", url, true);
+
+				//Send the proper header information along with the request
+				xhr.setRequestHeader("Accept", "application/vnd.layer+json; version=1.0");
+				console.log(xhr);
+			}
+
 			var hasText = false;
 
 			function checkTextField(field) {
@@ -176,21 +202,12 @@
 	<div id = "container">
 		<img id = "title" src = "TeamRoots_Logo@2x.png"/>
 
-		<p id = "text-1">
-			Safe, anonymous online counseling</br>and support for students.
-		</p>
-
-		<p id = "text-2">
-			Going through rough times? Chat anonymously with</br>trained counselors from your school,</br>wherever you are.
-		</p>
-
-		<p id = "text-3">
-			Coming soon to Web, iOS, and Android.
-		</p>
-
-		<form id = "email-us"action="http://teamroots.us11.list-manage.com/subscribe/post?u=aaac4fca4ccf110664b3f2db3&amp;id=7164548836" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-			<input id = "enter-email" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" onblur="checkTextField(this);" placeholder="Interested? Enter your email." required>
-			<input id = "go-button" type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button" onclick = "finished()">
+		
+		<form id = "email-us" action="" method="" target="_blank">
+			<input class = "form-field" id = "enter-email" onblur="checkTextField(this);" placeholder="Username or Email" required>
+			<input class = "form-field" id = "enter-password" onblur="checkTextField(this);" placeholder="Password" required>
+			<a href = ""><p id = "forgot-password">Forgot Password?</p></a>
+			<div id = "go-container"><input id = "go-button" type="submit" value="Login" name="subscribe" id="mc-embedded-subscribe" class="button" onclick = "finished()"></div>
 			<p id = "note"></p>
 		</form>
 	</div>
