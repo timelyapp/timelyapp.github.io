@@ -1,198 +1,259 @@
-<!doctype html>
 
-<html>
-<head>
-	<meta name="google-site-verification" content="qdKksUkDJq5uwWZr0UXRBVZAgmQhqquUS-OTrvwzz8E" />
-	<title>Timely</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<style type="text/css">
-		@font-face {
-			font-family: SFLight;
-			src: url('SF-UI/SF-UI-Text-Light.otf');
-		}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="apple-itunes-app" content="app-id=284882215, ct=website_banner"> -->
+    <meta property="og:site_name" content="Bash"/>
+    <meta property="og:title" content="Bash - Organize activities with friends"/>
+    <meta property="og:description" content="Create private activities in seconds and quickly notify friends. Hate Facebook events, group SMS, or painful email threads? You'll love Bash."/>
+    <meta property="og:image" content="http://i.imgur.com/AOmknY5.png">
+    <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content="525915964203211"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Bash - Organize activities with friends</title>
 
-		body {
-			padding: 0;
-			margin: 0;
-		}
+    <!-- Bootstrap -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/main.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel='stylesheet'>
 
-		#container {
-			padding: 15px;
-			height: 480px;
-			margin: auto;
-			position: absolute;
-			top: 0; left: 0; bottom: 0; right: 0;
-		}
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
-		#title { 
-			height: 120px;
-			display: block;
-			margin-left: auto;
-    		margin-right: auto;
-    		margin-bottom: 60px;
-		}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="header">
+      <div class="container">
+        <div class="row">
 
-		#text-1, #text-2, #text-3, #note {
-			text-align: center;
-			font-family: SFLight;
-			color: gray;
-		}
+          <div class="name">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-5 col-xs-offset-1">
+                  <div class="hidden-xs">
+                    <img src="/images/logo_lower.png" width="25%">
+                  </div>
+                  <div class="visible-xs">
+                    <img src="/images/logo_lower.png" width="100%">
+                  </div>
+                </div>
+                <div class="col-xs-5">
+                  <ul>
+                    <a href="mailto:zm@berkeley.edu"><li>CONTACT</li></a>
+                    <a href="#"><li>PRESS</li></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-		#text-1 {
-			font-size: 30px;
-			margin-bottom: 0;
-		}
+          <div class="tagline">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-1">
+                  <center>
+                  <div class="hidden-xs">
+                    <div class="hidden-sm">
+                      <br><br><br><br><br><br>
+                    </div>
+                  </div>
+                  <div class="visible-sm">
+                    <br><br>
+                  </div>
+                  <h1>Organize activities with friends. Quick and easy.</h1>
+                  <h3>Create private activities in seconds and quickly notify friends. Hate Facebook events, group SMS, or painful email threads? You'll love Bash.</h3>
+                  <br><br><br>
+                  <div class="hidden-xs"><div class="hidden-sm">
+                    <form action="//svmmit.us10.list-manage.com/subscribe/post?u=939ef43acf523124c211c786c&amp;id=548586940a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                     <div class="input-group">
+                      <input type="email"  name="EMAIL" id="mce-EMAIL" class="required email form" placeholder="Enter Email Address">
+                      <span>
+                        <button class="go" type="submit" id="mc-embedded-subscribe">Join Private Beta</button>
+                      </span>
+                    </div><!-- /input-group --></form><br><br><br>
+                  </div></div><!--end hidden -xs!-->
+                   <a style="color:#2ecc71;font-size:20px;" class="fancybox-media" href="https://www.youtube.com/watch?v=G7wMGnjM7WM?vq=hd720"><i style="font-size:25px;color:#2ecc71;font-weight:400;"class="ion-ios-play">&nbsp;&nbsp;<span style="font-weight:300;font-style:normal;">Watch Video</span></i></a>
 
-		#text-2 {
-			margin-top: 15px;
-			margin-bottom: 0px;
-			font-size: 18px;
-		}
+                </center>
+                </div>
+                <div class="col-sm-4">
+                  <div class="hidden-xs">
+                    <img align="right" src="/images/iphone6tilt.png" width="90%"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-		#text-3 {
-			margin-top: 60px;
-			font-size: 20px;
-		}
+        </div>
+      </div>
+    </div>
 
-		#enter-email{
-			width: 250px;
-			padding: 10px;  
-	   		border: solid 1px rgb(210, 210, 210);  
-	    	outline: 0;  
-	   		background-color: white;
-	   		font-size: 12px; 
-	   		border-radius: 5px;
-	   		font-family: SFLight;
-		}
+    <div class="feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="hidden-xs">
+                  <img src="/images/create.png" width="70%">
+                </div>
+                <div class="visible-xs">
+                  <center><img src="/images/create.png" width="70%"></center>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="text">
+                  <center> 
+                    <div class="hidden-xs"><span class="step size-96"><i style="font-size:100px;color:#27ae60;"class="ion-ios-people-outline"></i></span></div>
+                    <h1>Create Activites Easily</h1><br>
+                    <p>Bash makes it easy to create new activites and invite friends to them. Come up with a name, time, and location, then choose the friends you wish to invite. Voila, created!</p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		#go-button{ 
-	   		padding: 9px 15px;  
-	   		background-color: rgba(81, 199, 129, 0.85);  
-	   		border: solid 1px #51C781;  
-	   		border-radius: 5px;
-	   		color: white;  
-	   		font-size: 12px; 
-	   		-webkit-transition: .2s all;
-			-moz-transition: .2s all;
-			-o-transition: .2s all;
-			transition: .2s all;
-		}
+    <div class="hidden-xs">
+    <div class="feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="text">
+                  <center> 
+                    <span class="step size-96"><i style="font-size:100px;color:#27ae60;"class="ion-ios-loop-strong"></i></span>
+                    <h1>Activity Details Synchronized</h1><br>
+                    <p>Bash synchronizes all event details in a centralized event detail view where users can negotiate time and location without the hassle of long threads of SMS or email.</p>
+                  </center>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <img align="right" src="/images/details.png" width="70%">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
-		#go-button:hover{
-			background-color: rgba(81, 199, 129, 1.0);
-			color: white;
-		}
+    <div class="visible-xs">
+      <div class="feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="row">
+                <div class="col-lg-6">
+                  <center><img src="/images/details.png" width="70%"></center>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text">
+                    <center> 
+                      <h1>Activity Details Synchronized</h1><br>
+                    <p>Bash synchronizes all event details in a centralized event detail view where users can negotiate time and location without the hassle of long threads of SMS or email.</p>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		::-webkit-input-placeholder { /* WebKit browsers */
-    		color: rgb(210, 210, 210);
-		}
+    <div class="download">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1">
+            <center>
+              <h1>Bash is coming soon. Join our beta in the meantime.</h1>
+              <p>We will be inviting new beta users by school, please use your .edu email if possible.</p><br><br>
+              <div class="input-group">
+                    <form action="//svmmit.us10.list-manage.com/subscribe/post?u=939ef43acf523124c211c786c&amp;id=548586940a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                   <div class="input-group">
+                    <input type="email"  name="EMAIL" id="mce-EMAIL" class="required email form" placeholder="Enter Email Address">
+                    <div class="visible-xs"><br></div>
+                    <span>
+                      <button class="go" type="submit" id="mc-embedded-subscribe">Join Private Beta</button>
+                    </span>
+                  </div><!-- /input-group --></form>
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- 		   	color: rgb(210, 210, 210);
-		}
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+              <div class="col-sm-6">
+                <p>Bash is made by the team at <a href="http://svmmit.co">Svmmit</a></p>
+              </div>
+              <div class="col-sm-6">
+                <p class="text-right">&copy; 2015 Bash</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		::-moz-placeholder { /* Mozilla Firefox 19+ */
-  			color: rgb(210, 210, 210);
-		}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
-		:-ms-input-placeholder { /* Internet Explorer 10+ */
-   			color: rgb(210, 210, 210);
-		}
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('.fancybox-media').fancybox({
+    padding : 0,
+    width : 853,
+    height : 480,
+    openEffect  : 'none',
+    closeEffect : 'none',
+    helpers : {
+      media : {}
+    }
+  });
+});
+</script>
 
-		#note {
-			font-size: 12px;
-		}
-
-		#email-us {
-			width: 350px;
-			margin: 0 auto;
-		}
-
-		#footer {
-			text-align: center;
-			height: 20px;
-			color: gray;
-			font-family: SFLight;
-			position: absolute;
-			bottom: 0; left: 0; right: 0;
-			padding: 10px;
-			font-size: 20px;
-		}
-
-		a:link {
-			text-decoration: none;
-			color: rgb(200, 200, 200);
-			-webkit-transition: .2s all;
-			-moz-transition: .2s all;
-			-o-transition: .2s all;
-			transition: .2s all;
-		}
-
-		a:hover {
-			text-decoration: none;
-			color: gray;
-		}
-
-		a:visited {
-			text-decoration: none;
-			color: rgb(200, 200, 200);
-		}
-	</style>
-	<script type="text/javascript">
-			var hasText = false;
-
-			function checkTextField(field) {
-			    if (field.value == '') {
-			        hasText = false;
-			    }else{
-			    	hasText = true;
-			    }
-			}
-
-			function finished(){
-				var email = document.getElementById("enter-email").value;
-				AtPos = email.indexOf("@")
-				StopPos = email.lastIndexOf(".")
-
-				if(hasText){
-					if (email.length > 5 && AtPos != -1 && StopPos != -1) {
-						document.getElementById("form-div").innerHTML= "<p id = 'note'>Thanks for the interest! We'll get in touch soon.</p>";
-						console.log(email);
-					} else {
-						//document.getElementById("note").innerHTML= "Woah there - that's not a valid email.";
-						console.log(email);
-					}
-				} else {
-						//document.getElementById("note").innerHTML= "Woah there - enter an email address first.";
-						console.log(email);
-				}
-			}
-
-		</script>
-</head>
-
-<body>
-	<div id = "container">
-		<img id = "title" src = "timely.jpg"/>
-
-		<p id = "text-1">
-			Timely, make the most out of</br>your time.
-		</p>
-
-		<p id = "text-2">
-			Timely listens to what you want along with how much time you have</br>and instantly returns a list of suitable destinations.</br>For example, if you're craving Mexican food and you only have 40 minutes</br>Timely will return a list of Mexican restaraunts</br>that you can go to, eat at and come back all within 40 minutes.   
-		</p>
-
-		<p id = "text-3">
-			Coming soon to iOS.
-		</p>
-
-	</div>
-
-	<div id = "footer">
-			<a href = "mailto:aakashthumaty" class = "get-notified">Contact us</a>
-	</div>
-</body>
-
+  </body>
 </html>
