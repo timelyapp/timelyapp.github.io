@@ -1,391 +1,198 @@
+<!doctype html>
 
-<!DOCTYPE html>
-<html lang="en">
-<style type="text/css">
-h1, h2, h3, h4, h5, p, a, li, ul {
-  font-family: 'Open Sans', sans-serif; }
+<html>
+<head>
+	<meta name="google-site-verification" content="qdKksUkDJq5uwWZr0UXRBVZAgmQhqquUS-OTrvwzz8E" />
+	<title>Timely</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<style type="text/css">
+		@font-face {
+			font-family: SFLight;
+			src: url('SF-UI/SF-UI-Text-Light.otf');
+		}
 
-@media (max-width: 767px) {
-  .name {
-    padding: 30px 0px 10px 0px !important; }
+		body {
+			padding: 0;
+			margin: 0;
+		}
 
-  .tagline h1 {
-    font-size: 30px !important;
-    line-height: 45px !important; }
-  .tagline h3 {
-    font-size: 16px !important;
-    line-height: 24px !important; }
+		#container {
+			padding: 15px;
+			height: 480px;
+			margin: auto;
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+		}
 
-  .text {
-    margin-top: 25px !important; }
+		#title { 
+			height: 120px;
+			display: block;
+			margin-left: auto;
+    		margin-right: auto;
+    		margin-bottom: 60px;
+		}
 
-  .feature {
-    padding: 25px 0px 25px 0px !important; }
+		#text-1, #text-2, #text-3, #note {
+			text-align: center;
+			font-family: SFLight;
+			color: gray;
+		}
 
-  .download h1 {
-    font-size: 28px !important;
-    padding: 0px 20px 0px 20px;
-    line-height: 35px !important; }
+		#text-1 {
+			font-size: 30px;
+			margin-bottom: 0;
+		}
 
-  .footer p {
-    text-align: center; } }
-@media (min-width: 768px) and (max-width: 979px) {
-  .tagline h1 {
-    font-size: 32px !important;
-    line-height: 45px !important; }
-  .tagline h3 {
-    font-size: 16px !important;
-    line-height: 22px !important; }
+		#text-2 {
+			margin-top: 15px;
+			margin-bottom: 0px;
+			font-size: 18px;
+		}
 
-  .text {
-    padding: 0px !important;
-    margin: 0px !important;
-    margin-top: 25px !important; }
-    .text h1 {
-      font-size: 24px !important; }
-    .text p {
-      font-size: 14px !important; } }
-.header {
-  background-color: white;
-  color: black; }
-  .header li {
-    display: inline;
-    color: #3498db;
-    margin-left: 40px;
-    font-weight: 600;
-    font-size: 14px; }
-    .header li:hover {
-      opacity: 0.7; }
-  .header ul {
-    text-align: right;
-    padding-top: 8px; }
-  .header a {
-    text-decoration: none; }
+		#text-3 {
+			margin-top: 60px;
+			font-size: 20px;
+		}
 
-.name {
-  padding: 40px 0px 20px 0px;
-  color: white; }
-  .name h1 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 30px;
-    font-weight: 600; }
-  .name button {
-    background-color: transparent;
-    color: #27ae60;
-    border: 1px solid #27ae60;
-    padding: 10px 25px 10px 25px;
-    border-radius: 5px; }
-    .name button:hover {
-      background-color: #27ae60;
-      color: white; }
+		#enter-email{
+			width: 250px;
+			padding: 10px;  
+	   		border: solid 1px rgb(210, 210, 210);  
+	    	outline: 0;  
+	   		background-color: white;
+	   		font-size: 12px; 
+	   		border-radius: 5px;
+	   		font-family: SFLight;
+		}
 
-.tagline {
-  margin-top: 25px; }
-  .tagline h1 {
-    color: #2c3e50;
-    font-weight: 300;
-    font-size: 45px;
-    line-height: 60px; }
-  .tagline h3 {
-    color: #2c3e50;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 30px; }
-  .tagline .form {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    width: 300px;
-    font-family: 'Open Sans', sans-serif; }
-  .tagline .go {
-    font-size: 16px;
-    padding: 10px 30px 10px 30px;
-    background-color: #2ecc71;
-    color: white;
-    border-radius: 5px;
-    border: 1px solid #2ecc71; }
-    .tagline .go:hover {
-      opacity: 0.7; }
+		#go-button{ 
+	   		padding: 9px 15px;  
+	   		background-color: rgba(81, 199, 129, 0.85);  
+	   		border: solid 1px #51C781;  
+	   		border-radius: 5px;
+	   		color: white;  
+	   		font-size: 12px; 
+	   		-webkit-transition: .2s all;
+			-moz-transition: .2s all;
+			-o-transition: .2s all;
+			transition: .2s all;
+		}
 
-.feature {
-  padding: 50px 0px 50px 0px; }
-  .feature .text {
-    margin-top: 125px; }
-    .feature .text h1 {
-      font-weight: 300;
-      font-size: 30px;
-      color: #2c3e50; }
-    .feature .text p {
-      font-size: 17px;
-      color: #34495e; }
+		#go-button:hover{
+			background-color: rgba(81, 199, 129, 1.0);
+			color: white;
+		}
 
-.download {
-  padding: 50px 0px 100px 0px; }
-  .download h1 {
-    font-weight: 300;
-    font-size: 30px;
-    color: #2c3e50; }
-  .download .form {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #bdc3c7;
-    width: 350px;
-    font-family: 'Open Sans', sans-serif; }
-  .download .go {
-    font-size: 16px;
-    padding: 10px 30px 10px 30px;
-    background-color: #2ecc71;
-    color: white;
-    border-radius: 5px;
-    border: 1px solid #2ecc71; }
-    .download .go:hover {
-      opacity: 0.7; }
+		::-webkit-input-placeholder { /* WebKit browsers */
+    		color: rgb(210, 210, 210);
+		}
 
-.legal {
-  padding: 10px 0px 20px 0px; }
-  .legal h1 {
-    margin-top: 30px;
-    font-size: 22px;
-    font-weight: 300; }
-  .legal h3 {
-    font-size: 14px;
-    margin-top: 40px;
-    font-weight: 600;
-    color: #27ae60; }
-  .legal a {
-    text-decoration: none; }
-    .legal a:hover {
-      opacith: 0.7; }
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ 		   	color: rgb(210, 210, 210);
+		}
 
-.policy {
-  margin-bottom: 50px; }
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+  			color: rgb(210, 210, 210);
+		}
 
-.footer {
-  padding: 20px 0px 10px 0px;
-  color: #95a5a6; }
-  .footer a {
-    text-decoration: none;
-    color: #27ae60; }
-    .footer a:hover {
-      opacity: 0.7; }
-      </style>
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+   			color: rgb(210, 210, 210);
+		}
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="apple-itunes-app" content="app-id=284882215, ct=website_banner"> -->
-    <meta property="og:site_name" content="Timely"/>
-    <meta property="og:title" content="Timely - Make the most out of your time"/>
-    <meta property="og:description" content="Create private activities in seconds and quickly notify friends. Hate Facebook events, group SMS, or painful email threads? You'll love Bash."/>
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/images/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <title>Timely</title>
+		#note {
+			font-size: 12px;
+		}
 
-    <!-- Bootstrap -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="/stylesheets/main.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel='stylesheet'>
+		#email-us {
+			width: 350px;
+			margin: 0 auto;
+		}
 
-    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		#footer {
+			text-align: center;
+			height: 20px;
+			color: gray;
+			font-family: SFLight;
+			position: absolute;
+			bottom: 0; left: 0; right: 0;
+			padding: 10px;
+			font-size: 20px;
+		}
 
-  </head>
-  <body>
-    
-    <div class="header">
-      <div class="container">
-        <div class="row">
+		a:link {
+			text-decoration: none;
+			color: rgb(200, 200, 200);
+			-webkit-transition: .2s all;
+			-moz-transition: .2s all;
+			-o-transition: .2s all;
+			transition: .2s all;
+		}
 
-          <div class="name">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-5 col-xs-offset-1">
-                  <div class="hidden-xs">
-                    <img src="timely.png" width="100%">
-                  </div>
-                  <div class="visible-xs">
-                    <img src="timely.png" width="100%">
-                  </div>
-                </div>
-                <div class="col-xs-5">
-                  <ul>
-                    <a href="mailto:aakashthumaty@gmail.com"><li>CONTACT</li></a>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+		a:hover {
+			text-decoration: none;
+			color: gray;
+		}
 
-          <div class="tagline">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-6 col-sm-offset-1">
-                  <center>
-                  <div class="hidden-xs">
-                    <div class="hidden-sm">
-                      <br><br><br><br><br><br>
-                    </div>
-                  </div>
-                  <div class="visible-sm">
-                    <br><br>
-                  </div>
-                  <h1>Timely, make the most out of your time.</h1>
-                  <h3>Create private activities in seconds and quickly notify friends. Hate Facebook events, group SMS, or painful email threads? You'll love Bash.</h3>
-                  <br><br><br>
-                  <!--end hidden -xs!-->
-                  
+		a:visited {
+			text-decoration: none;
+			color: rgb(200, 200, 200);
+		}
+	</style>
+	<script type="text/javascript">
+			var hasText = false;
 
-                </center>
-                </div>
-                <div class="col-sm-4">
-                  <div class="hidden-xs">
-                  <right>
-                    <img align="right" src="first.png" width="200%" height="200%"></img>
-                    </right>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+			function checkTextField(field) {
+			    if (field.value == '') {
+			        hasText = false;
+			    }else{
+			    	hasText = true;
+			    }
+			}
 
-        </div>
-      </div>
-    </div>
+			function finished(){
+				var email = document.getElementById("enter-email").value;
+				AtPos = email.indexOf("@")
+				StopPos = email.lastIndexOf(".")
 
-    <div class="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="hidden-xs">
-                  <img src="/images/create.png" width="70%">
-                </div>
-                <div class="visible-xs">
-                  <center><img src="/images/create.png" width="70%"></center>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="text">
-                  <center> 
-                    <div class="hidden-xs"><span class="step size-96"><i style="font-size:100px;color:#27ae60;"class="ion-ios-people-outline"></i></span></div>
-                    <h1>Create Activites Easily</h1><br>
-                    <p>Bash makes it easy to create new activites and invite friends to them. Come up with a name, time, and location, then choose the friends you wish to invite. Voila, created!</p>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+				if(hasText){
+					if (email.length > 5 && AtPos != -1 && StopPos != -1) {
+						document.getElementById("form-div").innerHTML= "<p id = 'note'>Thanks for the interest! We'll get in touch soon.</p>";
+						console.log(email);
+					} else {
+						//document.getElementById("note").innerHTML= "Woah there - that's not a valid email.";
+						console.log(email);
+					}
+				} else {
+						//document.getElementById("note").innerHTML= "Woah there - enter an email address first.";
+						console.log(email);
+				}
+			}
 
-    <div class="hidden-xs">
-    <div class="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="text">
-                  <center> 
-                    <span class="step size-96"><i style="font-size:100px;color:#27ae60;"class="ion-ios-loop-strong"></i></span>
-                    <h1>Activity Details Synchronized</h1><br>
-                    <p>Bash synchronizes all event details in a centralized event detail view where users can negotiate time and location without the hassle of long threads of SMS or email.</p>
-                  </center>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <img align="right" src="/images/details.png" width="70%">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+		</script>
+</head>
 
-    <div class="visible-xs">
-      <div class="feature">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-              <div class="row">
-                <div class="col-lg-6">
-                  <center><img src="/images/details.png" width="70%"></center>
-                </div>
-                <div class="col-lg-6">
-                  <div class="text">
-                    <center> 
-                      <h1>Activity Details Synchronized</h1><br>
-                    <p>Bash synchronizes all event details in a centralized event detail view where users can negotiate time and location without the hassle of long threads of SMS or email.</p>
-                    </center>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+	<div id = "container">
+		<img id = "title" src = "timely.jpg"/>
 
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <div class="row">
-             
-              <div class="col-sm-6">
-                <p class="text-center">&copy; 2015 Timely</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+		<p id = "text-1">
+			Timely, make the most out of</br>your time.
+		</p>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+		<p id = "text-2">
+			Timely listens to what you want along with how much time you have</br>and instantly returns a list of suitable destinations.</br>For example, if you're craving Mexican food and you only have 40 minutes</br>Timely will return a list of Mexican restaraunts</br>that you can go to, eat at and come back all within 40 minutes.   
+		</p>
 
-  <script type="text/javascript">
-  $(document).ready(function() {
-  $('.fancybox-media').fancybox({
-    padding : 0,
-    width : 853,
-    height : 480,
-    openEffect  : 'none',
-    closeEffect : 'none',
-    helpers : {
-      media : {}
-    }
-  });
-});
-</script>
+		<p id = "text-3">
+			Coming soon to iOS.
+		</p>
 
-  </body>
+	</div>
+
+	<div id = "footer">
+			<a href = "mailto:aakashthumaty" class = "get-notified">Contact us</a>
+	</div>
+</body>
+
 </html>
