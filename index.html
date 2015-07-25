@@ -18,16 +18,17 @@
 		}
 
 		#container {
-			padding: 15px;
-			height: 280px;
-			margin: auto;
-			position: absolute;
+			padding: 150px;
+			height: 1000px;
+			margin-top: 30px;
+/*			position: absolute;
+*/      width: 100%;
 			top: 0; left: 0; bottom: 0; right: 0;
 		}
 
     #container1 {
       padding: 15px;
-      height: 480px;
+      height: 1000px;
       margin: auto;
       position: absolute;
       top: 0; left: 0; bottom: 0; right: 0;
@@ -122,7 +123,6 @@
 			height: 20px;
 			color: gray;
 			font-family: SFLight;
-			position: absolute;
 			bottom: 0; left: 0; right: 0;
 			padding: 10px;
 			font-size: 20px;
@@ -146,19 +146,19 @@
 			text-decoration: none;
 			color: rgb(200, 200, 200);
 		}
+
+    #containers {
+      width: 100%;
+    }
+    #containers > div {
+      width: 33%;
+    }
+    #containers > div:nth-child(2) {
+      width: 33%;
+    }
+
 	</style>
-	<script type="text/javascript">
-			var hasText = false;
 
-			function checkTextField(field) {
-			    if (field.value == '') {
-			        hasText = false;
-			    }else{
-			    	hasText = true;
-			    }
-			}
-
-		</script>
 </head>
 
 <body>
@@ -166,8 +166,21 @@
 		<img id = "title" src = "timely.jpg"/>
 
 		<p id = "text-1">
-			Timely - make the most out of your time.
+			Make the most out of your time.
 		</p>
+
+      <div id ="left" style = "float:left; width: 25%;">
+        <img id = "img 1" src = "first.png" width="750" height="800" />
+      </div>
+      <div id = "middle" style = "float:right; width: 50%;">
+        <img id = "img 2" src = "second.png" width="750" height="800" />
+
+      </div>
+      <div id = "right" style = "float:left; width: 25%;">
+        <img id = "img 3" src = "third.png" width="750" height="800" />
+
+      </div>
+
 
 		<p id = "text-2">
 			Timely listens to what you want along with how much time you have</br>and instantly returns a list of suitable destinations.</br>For example, if you're craving Mexican food and you only have 40 minutes</br>Timely will return a list of Mexican restaraunts</br>that you can go to, eat at and come back all within 40 minutes.   
@@ -177,11 +190,13 @@
 			Coming soon to iOS.
 		</p>
 
+
+<div id = "footer">
+      <a href = "mailto:aakashthumaty" class = "get-notified">Contact us</a>
+  </div>
 	</div>
 
-	<div id = "footer">
-			<a href = "mailto:aakashthumaty" class = "get-notified">Contact us</a>
-	</div>
+	
 </body>
 
 </html>
