@@ -150,25 +150,6 @@
 			    }
 			}
 
-			function finished(){
-				var email = document.getElementById("enter-email").value;
-				AtPos = email.indexOf("@")
-				StopPos = email.lastIndexOf(".")
-
-				if(hasText){
-					if (email.length > 5 && AtPos != -1 && StopPos != -1) {
-						document.getElementById("form-div").innerHTML= "<p id = 'note'>Thanks for the interest! We'll get in touch soon.</p>";
-						console.log(email);
-					} else {
-						//document.getElementById("note").innerHTML= "Woah there - that's not a valid email.";
-						console.log(email);
-					}
-				} else {
-						//document.getElementById("note").innerHTML= "Woah there - enter an email address first.";
-						console.log(email);
-				}
-			}
-
 		</script>
 </head>
 
@@ -177,7 +158,7 @@
 		<img id = "title" src = "timely.jpg"/>
 
 		<p id = "text-1">
-			Timely, make the most out of</br>your time.
+			Timely - make the most out of your time.
 		</p>
 
 		<p id = "text-2">
